@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE CLACULATOR</title>
+    <link rel="stylesheet" href="./lovecalculator.css">
+    
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h3>LOVE CLACULATOR</h3>
+
+
+        <div class="input">
+          <pre> <input type= "text" name="yname" placeholder="Your Name" id="nameone" onfocus="this.value=''">   =   <input type= "text" name="lname" placeholder="Love Name" id="nametwo" onfocus="this.value=''"></pre>  
+       </div>
+       <br>
+
+
+       <div  class ="click-button">
+           <a href="#" onclick="loveinfo()">click</a>
+           <br>
+           <p id="print">LOVE PERCENTAGE</p>
+      
+       </div>
+       
+     
+       <div class="footer">
+           <hr>
+           <h4>God Bless Your Relationship</h4>
+       </div>
+    </div>
+    
+    <script >
+        function loveinfo(){
+            var name1=document.getElementById("nameone").value;
+            var name2=document.getElementById("nametwo").value;
+            if(name1.length<=2){
+                alert("Enter at least 3 character");
+            }
+            if(name2.length<=2){
+                alert("Enter at least 3 character");
+            }
+            else{
+                var lovedata = Math.floor(Math.random()*100);
+                 document.getElementById("print").innerText=name1 + " and " + name2 + " = " + lovedata + "%" + " of love ";
+            }
+        }
+    </script>
+</body>
+</html>
